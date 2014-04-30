@@ -42,6 +42,7 @@ if eval "test x$GCC = xyes"; then
       -Wreturn-type \
       -Wformat \
       -Werror=format-security \
+      -Wno-parentheses \
       -Wno-unused-parameter \
       -Wno-write-strings \
       -Wno-unused-variable
