@@ -498,6 +498,7 @@ int Edits::load(FileXML *file, int track_offset)
 		loaded_length = 0;
 //track->dump();
 	optimize();
+	return 0;
 }
 
 int Edits::load_edit(FileXML *file, int64_t &startproject, int track_offset)
@@ -659,6 +660,7 @@ int Edits::copy(int64_t start, int64_t end, FileXML *file, char *output_path)
 	file->tag.set_title("/EDITS");
 	file->append_tag();
 	file->append_newline();
+	return 0;
 }
 
 

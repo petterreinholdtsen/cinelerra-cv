@@ -305,6 +305,7 @@ CommonRender::CommonRender(MWindow *mwindow, RenderEngine *renderengine)
 int CommonRender::wait_for_completion()
 {
 	join();
+	return 0;
 }
 
 

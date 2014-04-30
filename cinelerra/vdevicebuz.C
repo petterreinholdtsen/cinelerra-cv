@@ -248,6 +248,7 @@ int VDeviceBUZ::reset_parameters()
 	color = 32768;
 	contrast = 32768;
 	whiteness = 32768;
+	return 0;
 }
 
 int VDeviceBUZ::close_input_core()
@@ -271,6 +272,7 @@ int VDeviceBUZ::close_input_core()
 			munmap(input_buffer, breq.count * breq.size);
 		input_buffer = 0;
 	}
+	return 0;
 }
 
 int VDeviceBUZ::close_output_core()

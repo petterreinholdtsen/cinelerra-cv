@@ -78,6 +78,7 @@ int KeepaliveThread::start_keepalive()
 	start();
 	startup_lock->lock("KeepaliveThread::start_keepalive 2");
 	startup_lock->unlock();
+	return 0;
 }
 
 void KeepaliveThread::run()
@@ -104,6 +105,7 @@ void KeepaliveThread::run()
 int KeepaliveThread::reset_keepalive()
 {
 	still_alive = 1;
+	return 0;
 }
 
 int KeepaliveThread::get_failed()
@@ -118,6 +120,7 @@ int KeepaliveThread::stop()
 // Force an immediate exit even if capture_frame worked.
 	Thread::end();
 	Thread::join();
+	return 0;
 }
 
 
@@ -178,6 +181,7 @@ int VideoDevice::initialize()
 	single_frame = 0;
 	channel_changed = 0;
 	picture_changed = 0;
+	return 0;
 }
 
 int VideoDevice::open_input(VideoInConfig *config, 
@@ -523,6 +527,7 @@ int VideoDevice::set_channel(Channel *channel)
 		if(input_base) return input_base->set_channel(channel);
 		if(output_base) return output_base->set_channel(channel);
 	}
+	return 0;
 }
 
 void VideoDevice::set_quality(int quality)
@@ -546,6 +551,7 @@ int VideoDevice::set_picture(PictureConfig *picture)
 
 		if(input_base) return input_base->set_picture(picture);
 	}
+	return 0;
 }
 
 int VideoDevice::update_translation()
@@ -743,6 +749,7 @@ int VideoDevice::write_buffer(VFrame *output, EDL *edl)
 int VideoDevice::output_visible()
 {
 	if(output_base) return output_base->output_visible();
+	return 0;
 }
 
 BC_Bitmap* VideoDevice::get_bitmap()

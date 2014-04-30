@@ -225,6 +225,7 @@ int VDevicePrefs::create_dvb_objs()
 	dialog->add_subwindow(number_title = new BC_Title(x1, y, _("Adaptor:")));
 	device_number = new VDeviceTumbleBox(this, x1, y + 20,  &in_config->dvb_in_number, 0, 16);
 	device_number->create_objects();
+	return 0;
 }
 
 int VDevicePrefs::create_lml_objs()
@@ -592,6 +593,7 @@ VDeviceTextBox::VDeviceTextBox(int x, int y, char *output)
 int VDeviceTextBox::handle_event() 
 { 
 	strcpy(output, get_text()); 
+	return 1;
 }
 
 VDeviceTumbleBox::VDeviceTumbleBox(VDevicePrefs *prefs, 

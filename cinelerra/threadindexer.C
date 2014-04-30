@@ -59,6 +59,7 @@ int ThreadIndexer::start_build()
 {
 	interrupt_flag = 0;
 	start();
+	return 0;
 }
 
 // build all here to allow editing during build
@@ -165,5 +166,6 @@ int ThreadIndexer::interrupt_build()
 	indexfile->interrupt_index();
 	interrupt_lock->lock(" ThreadIndexer::interrupt_build");
 	interrupt_lock->unlock();
+	return 0;
 }
 

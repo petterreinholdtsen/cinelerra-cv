@@ -2635,6 +2635,7 @@ int BC_WindowBase::flash(int x, int y, int w, int h, int flush)
 int BC_WindowBase::flash(int flush)
 {
 	flash(-1, -1, -1, -1, flush);
+	return 0;
 }
 
 void BC_WindowBase::flush()

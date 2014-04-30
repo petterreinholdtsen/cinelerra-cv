@@ -1178,7 +1178,7 @@ int Track::clear_handle(double start,
 	int clear_plugins, 
 	double &distance)
 {
-	edits->clear_handle(start, end, clear_plugins, distance);
+	return edits->clear_handle(start, end, clear_plugins, distance);
 }
 
 int Track::popup_transition(int cursor_x, int cursor_y)

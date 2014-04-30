@@ -401,6 +401,7 @@ void LoadPrevious::run()
 int LoadPrevious::set_path(char *path)
 {
 	strcpy(this->path, path);
+	return 0;
 }
 
 
@@ -550,4 +551,5 @@ int OverwriteReel::handle_event()
 		rwindow->reel_name->disable();
 		rwindow->reel_number->disable();
 	}
+	return 1;
 }

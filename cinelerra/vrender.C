@@ -345,6 +345,7 @@ TRACE("VRender::insert_timecode 60")
 */
 	delete(input);
 UNTRACE
+	return 0;
 }
 
 
@@ -623,6 +624,7 @@ int VRender::init_device_buffers()
 		video_out = 0;
 		render_strategy = -1;
 	}
+	return 0;
 }
 
 int VRender::get_datatype()
@@ -639,10 +641,12 @@ int VRender::start_playback()
 	{
 		start();
 	}
+	return 0;
 }
 
 int VRender::wait_for_startup()
 {
+	return 0;
 }
 
 

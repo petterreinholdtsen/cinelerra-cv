@@ -697,7 +697,7 @@ int RecordGUIBatches::drag_stop_event()
 		dragging_item = 0;
 		gui->update_batches();
 	}
-
+	return 0;
 }
 
 
@@ -1231,6 +1231,7 @@ int RecordGUI::set_translation(int x, int y, float z)
 	record->video_x = x;
 	record->video_y = y;
 	record->video_zoom = z;
+	return 0;
 }
 
 int RecordGUI::update_dropped_frames(long new_dropped)
@@ -1292,6 +1293,7 @@ void RecordGUI::update_labels(double new_position)
 int RecordGUI::update_prev_label(long new_position) 
 { 
 	update_title(prev_label_title, new_position);
+	return 0;
 }
 
 // int RecordGUI::update_next_label(long new_position) 
@@ -1319,6 +1321,7 @@ int RecordGUI::update_title(BC_Title *title, double position)
 	lock_window("RecordGUI::update_title");
 	title->update(string);
 	unlock_window();
+	return 0;
 }
 
 int RecordGUI::update_duration_boxes()
@@ -1330,6 +1333,7 @@ int RecordGUI::update_duration_boxes()
 //	loop_min->update(string);
 //	sprintf(string, "%d", engine->get_loop_sec());
 //	loop_sec->update(string);
+	return 0;
 }
 
 
@@ -1371,6 +1375,7 @@ int RecordGUIModeMenu::add_items()
 int RecordGUIModeMenu::handle_event()
 {
 //	engine->set_record_mode(get_text());
+	return 0;
 }
 
 RecordGUIMode::RecordGUIMode(char *text)

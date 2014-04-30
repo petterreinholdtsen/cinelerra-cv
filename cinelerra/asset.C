@@ -454,6 +454,7 @@ int Asset::test_path(const char *path)
 
 int Asset::test_plugin_title(const char *path)
 {
+	return 0;
 }
 
 int Asset::read(FileXML *file, 
@@ -705,6 +706,7 @@ int Asset::write_index(char *path, int data_bytes)
 	index_end = audio_length;
 	old_index_end = 0;
 	index_start = 0;
+	return 0;
 }
 
 // Output path is the path of the output file if name truncation is desired.

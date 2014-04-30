@@ -50,6 +50,7 @@ int DC_Offset::calibrate_dc_offset(int *output, RecordGUIDCOffsetText **dc_offse
 	this->dc_offset_text = dc_offset_text;
 	this->input_channels = input_channels;
 	start();
+	return 0;
 }
 
 

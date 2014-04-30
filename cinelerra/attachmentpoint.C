@@ -250,6 +250,7 @@ int AttachmentPoint::dump()
 	{
 		printf("    No Plugin\n");
 	}
+	return 0;
 }
 
 

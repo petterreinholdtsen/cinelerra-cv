@@ -103,6 +103,7 @@ int LabelGUI::button_press_event()
 	}
 	if (label)
 		set_tooltip(this->label->textstr);
+	return 0;
 }
 
 int LabelGUI::handle_event()

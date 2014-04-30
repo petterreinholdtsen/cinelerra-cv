@@ -228,6 +228,7 @@ int BC_ListBoxToggle::cursor_leave_event(int *redraw_toggles)
 		state = BC_ListBoxToggle::TOGGLE_CHECKED;
 	else
 		state = BC_ListBoxToggle::TOGGLE_UP;
+	return 0;
 }
 
 int BC_ListBoxToggle::button_press_event()
@@ -4401,6 +4402,7 @@ int BC_ListBox::draw_titles(int flash)
 		gui->flash();
 		gui->flush();
 	}
+	return 0;
 }
 
 void BC_ListBox::draw_toggles(int flash)

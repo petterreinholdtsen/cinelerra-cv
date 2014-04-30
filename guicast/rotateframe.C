@@ -467,6 +467,7 @@ int RotateEngine::coords_to_pixel(SourceCoord &float_pixel, float &input_y, floa
 	if(input_x >= plugin->input->get_w()) float_pixel.x = -1;
 	else
 	float_pixel.x = input_x;
+	return 0;
 }
 
 

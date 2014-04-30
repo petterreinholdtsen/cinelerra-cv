@@ -241,7 +241,7 @@ int CICache::age()
 	}while(prev_memory_usage != memory_usage &&
 		memory_usage > preferences->cache_size && 
 		!result);
-
+	return 0;
 }
 
 int64_t CICache::get_memory_usage(int use_lock)
@@ -338,6 +338,7 @@ int CICache::dump()
 			current->age);
 	}
 	total_lock->unlock();
+	return 0;
 }
 
 

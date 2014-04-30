@@ -106,11 +106,13 @@ int IndexThread::start_build()
 	current_buffer = 0;
 	for(int i = 0; i <  TOTAL_BUFFERS; i++) last_buffer[i] = 0;
 	start();
+	return 0;
 }
 
 int IndexThread::stop_build()
 {
 	join();
+	return 0;
 }
 
 void IndexThread::run()

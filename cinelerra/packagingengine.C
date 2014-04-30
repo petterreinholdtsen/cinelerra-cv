@@ -94,7 +94,7 @@ int PackagingEngineDefault::create_packages_single_farm(
 			number_start);
 		current_number++;
 	}
-
+	return 0;
 }
 
 RenderPackage* PackagingEngineDefault::get_package_single_farm(double frames_per_second, 

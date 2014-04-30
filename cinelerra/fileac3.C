@@ -51,6 +51,7 @@ int FileAC3::reset_parameters_derived()
 	temp_raw_allocated = 0;
 	temp_compressed = 0;
 	compressed_allocated = 0;
+	return 0;
 }
 
 void FileAC3::get_parameters(BC_WindowBase *parent_window, 
@@ -149,6 +150,7 @@ int FileAC3::close_file()
 	}
 	reset_parameters();
 	FileBase::close_file();
+	return 0;
 }
 
 // Channel conversion matrices because ffmpeg encodes a

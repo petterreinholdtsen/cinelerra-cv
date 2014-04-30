@@ -1275,8 +1275,9 @@ int BatchRenderList::drag_stop_event()
 		{
 			thread->move_batch(src, dst);
 		}
-		BC_ListBox::drag_stop_event();
+		return BC_ListBox::drag_stop_event();
 	}
+	return 0;
 }
 
 

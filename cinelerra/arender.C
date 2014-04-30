@@ -419,6 +419,7 @@ int ARender::reverse_buffer(double *buffer, int64_t len)
 		buffer[start] = buffer[end];
 		buffer[end] = temp;
 	}
+	return 0;
 }
 
 int ARender::get_next_peak(int current_peak)

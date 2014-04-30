@@ -222,7 +222,7 @@ int VDeviceV4L::set_mute(int muted)
 {
 // Open audio, which obviously is controlled by the video driver.
 // and apparently resets the input source.
-	v4l1_set_mute(muted);
+	return v4l1_set_mute(muted);
 }
 
 int VDeviceV4L::v4l1_set_mute(int muted)
@@ -366,7 +366,7 @@ int VDeviceV4L::v4l1_get_norm(int norm)
 
 int VDeviceV4L::set_picture(PictureConfig *picture)
 {
-	v4l1_set_picture(picture);
+	return v4l1_set_picture(picture);
 }
 
 

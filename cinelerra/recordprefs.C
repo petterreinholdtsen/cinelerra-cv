@@ -265,6 +265,7 @@ RecordRealTime::RecordRealTime(MWindow *mwindow,
 int RecordRealTime::handle_event()
 {
 	pwindow->thread->edl->session->real_time_record = get_value();
+	return 0;
 }
 
 
@@ -438,6 +439,7 @@ StillImageUseDuration::StillImageUseDuration(PreferencesWindow *pwindow, int val
 int StillImageUseDuration::handle_event()
 {
 	pwindow->thread->edl->session->si_useduration = get_value();
+	return 0;
 }
 
 StillImageDuration::StillImageDuration(PreferencesWindow *pwindow, int x, int y)
