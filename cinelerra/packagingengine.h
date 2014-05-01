@@ -30,6 +30,7 @@
 class PackagingEngine
 {
 public:
+	virtual ~PackagingEngine() {};
 	virtual int create_packages_single_farm(
 		EDL *edl,
 		Preferences *preferences,
@@ -51,7 +52,7 @@ class PackagingEngineDefault : public PackagingEngine
 {
 public:
 	PackagingEngineDefault();
-	~PackagingEngineDefault();
+	virtual ~PackagingEngineDefault();
 	int create_packages_single_farm(
 		EDL *edl,
 		Preferences *preferences,

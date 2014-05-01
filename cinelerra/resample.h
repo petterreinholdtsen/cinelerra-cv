@@ -31,7 +31,7 @@ class Resample
 {
 public:
 	Resample(File *file, int channels);
-	~Resample();
+	virtual ~Resample();
 
 // Reset after seeking
 	void reset(int channel = -1);
@@ -98,7 +98,7 @@ class Resample_float
 {
 public:
 	Resample_float(File *file, int channels);
-	~Resample_float();
+	virtual ~Resample_float();
 
 // Reset after seeking
 	void reset(int channel = -1);

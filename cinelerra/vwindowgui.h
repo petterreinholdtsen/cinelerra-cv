@@ -194,6 +194,7 @@ public:
 		VWindowGUI *gui, 
 		int x, 
 		int y);
+	virtual ~VWindowTransport() {};
 	EDL* get_edl();
 	void goto_start();
 	void goto_end();

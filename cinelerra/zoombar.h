@@ -78,6 +78,7 @@ class SampleZoomPanel : public ZoomPanel
 {
 public:
 	SampleZoomPanel(MWindow *mwindow, ZoomBar *zoombar, int x, int y);
+	virtual ~SampleZoomPanel() {};
 	int handle_event();
 	MWindow *mwindow;
 	ZoomBar *zoombar;
@@ -87,6 +88,7 @@ class AmpZoomPanel : public ZoomPanel
 {
 public:
 	AmpZoomPanel(MWindow *mwindow, ZoomBar *zoombar, int x, int y);
+	virtual ~AmpZoomPanel() {};
 	int handle_event();
 	MWindow *mwindow;
 	ZoomBar *zoombar;
@@ -96,6 +98,7 @@ class TrackZoomPanel : public ZoomPanel
 {
 public:
 	TrackZoomPanel(MWindow *mwindow, ZoomBar *zoombar, int x, int y);
+	virtual ~TrackZoomPanel() {};
 	int handle_event();
 	MWindow *mwindow;
 	ZoomBar *zoombar;

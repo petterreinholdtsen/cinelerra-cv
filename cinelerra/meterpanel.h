@@ -39,7 +39,7 @@ public:
 		int meter_count,
 		int use_meters,
 		int use_recording = 0);
-	~MeterPanel();
+	virtual ~MeterPanel();
 
 	int create_objects();
 	int set_meters(int meter_count, int use_meters);

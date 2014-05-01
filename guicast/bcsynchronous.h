@@ -109,7 +109,7 @@ class BC_SynchronousCommand
 {
 public:
 	BC_SynchronousCommand();
-	~BC_SynchronousCommand();
+	virtual ~BC_SynchronousCommand();
 
 	virtual void copy_from(BC_SynchronousCommand *command);
 

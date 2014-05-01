@@ -80,7 +80,7 @@ class MainEditing : public EditPanel
 {
 public:
 	MainEditing(MWindow *mwindow, MButtons *mbuttons, int x, int y);
-
+	virtual ~MainEditing() {};
 	
 	MWindow *mwindow;
 	MButtons *mbuttons;

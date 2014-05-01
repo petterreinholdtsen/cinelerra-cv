@@ -36,7 +36,7 @@ class PlayTransport
 {
 public:
 	PlayTransport(MWindow *mwindow, BC_WindowBase *subwindow, int x, int y);
-	~PlayTransport();
+	virtual ~PlayTransport();
 
 	int create_objects();
 	void reposition_buttons(int x, int y);

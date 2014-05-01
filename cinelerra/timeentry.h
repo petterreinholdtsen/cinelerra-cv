@@ -44,7 +44,7 @@ public:
 		int *output_day, 
 		double *output_time,
 		int time_format);
-	~TimeEntry();
+	virtual ~TimeEntry();
 	
 	void create_objects();
 	void time_to_hours(char *result, double time);

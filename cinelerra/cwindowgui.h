@@ -149,6 +149,7 @@ class CWindowEditing : public EditPanel
 {
 public:
 	CWindowEditing(MWindow *mwindow, CWindow *cwindow);
+	virtual ~CWindowEditing() {};
 	
 	void set_inpoint();
 	void set_outpoint();
@@ -162,7 +163,7 @@ class CWindowMeters : public MeterPanel
 {
 public:
 	CWindowMeters(MWindow *mwindow, CWindowGUI *gui, int x, int y, int h);
-	~CWindowMeters();
+	virtual ~CWindowMeters();
 	
 	int change_status_event();
 	
@@ -174,7 +175,7 @@ class CWindowZoom : public ZoomPanel
 {
 public:
 	CWindowZoom(MWindow *mwindow, CWindowGUI *gui, int x, int y);
-	~CWindowZoom();
+	virtual ~CWindowZoom();
 	int handle_event();
 	MWindow *mwindow;
 	CWindowGUI *gui;
@@ -223,6 +224,7 @@ public:
 		CWindowGUI *gui, 
 		int x, 
 		int y);
+	virtual ~CWindowTransport() {};
 	EDL* get_edl();
 	void goto_start();
 	void goto_end();
