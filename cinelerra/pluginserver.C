@@ -204,7 +204,7 @@ int PluginServer::set_path(char *path)
 	return 0;
 }
 
-void PluginServer::set_title(char *string)
+void PluginServer::set_title(const char *string)
 {
 	if(title) delete [] title;
 	title = new char[strlen(string) + 1];
