@@ -534,6 +534,7 @@ AC_OUTPUT(Makefile cinelerra-cvs-current.spec po/Makefile.in \
 					plugins/denoisemjpeg/Makefile \
 					plugins/despike/Makefile plugins/dissolve/Makefile plugins/dot/Makefile \
 					plugins/fieldframe/Makefile plugins/flip/Makefile plugins/framefield/Makefile \
+	plugins/findobject/Makefile \
 					plugins/freeverb/Makefile plugins/freezeframe/Makefile plugins/gain/Makefile \
 	plugins/gamma/Makefile \
 					plugins/holo/Makefile plugins/huesaturation/Makefile \
