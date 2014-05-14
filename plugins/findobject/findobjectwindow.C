@@ -489,7 +489,9 @@ int FindObjectAlgorithm::handle_event()
 void FindObjectAlgorithm::create_objects()
 {
 	add_item(new BC_MenuItem(to_text(NO_ALGORITHM)));
+#ifdef HAVE_OPENCV_SUFT
 	add_item(new BC_MenuItem(to_text(ALGORITHM_SURF)));
+#endif
 	add_item(new BC_MenuItem(to_text(ALGORITHM_CAMSHIFT)));
 	add_item(new BC_MenuItem(to_text(ALGORITHM_BLOB)));
 }
@@ -497,7 +499,9 @@ void FindObjectAlgorithm::create_objects()
 int FindObjectAlgorithm::from_text(char *text)
 {
 	if(!strcmp(text, _("Don't Calculate"))) return NO_ALGORITHM;
+#ifdef HAVE_OPENCV_SUFT
 	if(!strcmp(text, _("SURF"))) return ALGORITHM_SURF;
+#endif
 	if(!strcmp(text, _("CAMSHIFT"))) return ALGORITHM_CAMSHIFT;
 	if(!strcmp(text, _("Blob"))) return ALGORITHM_BLOB;
 }
@@ -509,9 +513,11 @@ char* FindObjectAlgorithm::to_text(int mode)
 		case NO_ALGORITHM:
 			return _("Don't Calculate");
 			break;
+#ifdef HAVE_OPENCV_SUFT
 		case ALGORITHM_SURF:
 			return _("SURF");
 			break;
+#endif
 		case ALGORITHM_BLOB:
 			return _("Blob");
 			break;
@@ -526,7 +532,9 @@ int FindObjectAlgorithm::calculate_w(FindObjectWindow *gui)
 {
 	int result = 0;
 	result = MAX(result, gui->get_text_width(MEDIUMFONT, to_text(NO_ALGORITHM)));
+#ifdef HAVE_OPENCV_SUFT
 	result = MAX(result, gui->get_text_width(MEDIUMFONT, to_text(ALGORITHM_SURF)));
+#endif
 	result = MAX(result, gui->get_text_width(MEDIUMFONT, to_text(ALGORITHM_CAMSHIFT)));
 	result = MAX(result, gui->get_text_width(MEDIUMFONT, to_text(ALGORITHM_BLOB)));
 	return result + 50;

@@ -83,7 +83,9 @@ using namespace cv;
 
 
 #define NO_ALGORITHM 0
+#ifdef HAVE_OPENCV_SUFT
 #define ALGORITHM_SURF 1
+#endif
 #define ALGORITHM_CAMSHIFT 2
 #define ALGORITHM_BLOB 3
 

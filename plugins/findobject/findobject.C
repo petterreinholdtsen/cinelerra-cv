@@ -1287,10 +1287,11 @@ int FindObjectMain::process_buffer(VFrame **frame,
 
 		switch(config.algorithm)
 		{
+#ifdef HAVE_OPENCV_SUFT
 			case ALGORITHM_SURF:
 				process_surf();
 				break;
-			
+#endif			
 			case ALGORITHM_CAMSHIFT:
 				process_camshift();
 				break;
