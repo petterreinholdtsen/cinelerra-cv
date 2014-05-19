@@ -39,7 +39,7 @@ StringFile::StringFile(size_t length)
 	available = this->length;
 }
 
-StringFile::StringFile(char *filename)
+StringFile::StringFile(const char *filename)
 {
 	FILE *in;
 	if(in = fopen(filename, "rb"))
@@ -71,7 +71,7 @@ StringFile::~StringFile()
 	delete [] string;
 }
 
-int StringFile::write_to_file(char *filename)
+int StringFile::write_to_file(const char *filename)
 {
 	FILE *out;
 	if(out = fopen(filename, "wb"))
@@ -87,7 +87,7 @@ int StringFile::write_to_file(char *filename)
 	return 0;
 }
 
-int StringFile::read_from_string(char *string)
+int StringFile::read_from_string(const char *string)
 {
 	int i;
 	
@@ -230,7 +230,7 @@ int StringFile::writeline(char *arg1, int indent)
 	}
 	
 	for(i = 0; i < indent; i++, pointer++) string[pointer] = ' ';
-	sprintf(&string[pointer], arg1);
+	strcpy(&string[pointer], arg1);
 	pointer += strlen(arg1);
 	return 0;
 }
