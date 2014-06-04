@@ -27,7 +27,7 @@
 class ErrorBox : public BC_Window
 {
 public:
-	ErrorBox(char *title, 
+	ErrorBox(const char *title,
 		int x = (int)BC_INFINITY, 
 		int y = (int)BC_INFINITY, 
 		int w = 400, 

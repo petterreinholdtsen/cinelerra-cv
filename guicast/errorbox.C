@@ -21,7 +21,7 @@
 
 #include "errorbox.h"
 
-ErrorBox::ErrorBox(char *title, int x, int y, int w, int h)
+ErrorBox::ErrorBox(const char *title, int x, int y, int w, int h)
  : BC_Window(title, x, y, w, h, w, h, 0)
 {
 }

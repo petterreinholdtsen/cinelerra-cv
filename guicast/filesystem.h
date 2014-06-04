@@ -76,7 +76,7 @@ public:
 // Syntax of filter is
 // single filter without [].
 // multiple filters enclosed in [].
-	int set_filter(char *new_filter);
+	int set_filter(const char *new_filter);
 	int set_show_all();     // show hidden files
 	int set_want_directory();
 	int set_sort_order(int value);

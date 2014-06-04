@@ -481,7 +481,7 @@ int FileSystem::update(char *new_dir)
 // success
 }
 
-int FileSystem::set_filter(char *new_filter)
+int FileSystem::set_filter(const char *new_filter)
 {
 	strcpy(filter, new_filter);
 	return 0;

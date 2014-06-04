@@ -1470,7 +1470,7 @@ void BC_ListBox::delete_columns()
 }
 
 // Need to copy titles so EDL can change
-void BC_ListBox::set_columns(const char **column_titles, 
+void BC_ListBox::set_columns(const char **column_titles,
 	int *column_width, 
 	int columns)
 {
